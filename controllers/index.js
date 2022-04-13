@@ -3,35 +3,20 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Jeyasuriyaa Jeyakumar' });
+  res.render('index', { title: 'My Portfolio' });
 });
 
+/* GET about page. */
 router.get('/about', (req, res, next) => {
   res.render('about', { 
-    title: 'About Me'
+    title: 'About',
+    pageText: 'This page is about me'
   })
 })
 
-router.get('/projects', (req, res, next) => {
-  res.render('projects', { 
-    title: 'My Projects',
-    pageText: 'This is the projects page'
-  })
-})
-
-router.get('/references', (req, res, next) => {
-  res.render('references', { 
-    title: 'References',
-    pageText: 'This is the reference page'
-  })
-})
-
+/* GET contact me page */
 router.get('/contact', (req, res, next) => {
-  res.render('contact', { 
-    title: 'Contact Me',
-    pageText: 'This is the contact page'
-  })
+  res.render('contact',{ title: 'Contact Me'})
 })
-
 
 module.exports = router;
